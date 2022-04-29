@@ -1,0 +1,24 @@
+/*Extend*/
+
+.medallones-contenedor {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    background-image: radial-gradient(circle 400px at 6.8% 8.3%, rgb(255, 244, 169) 0%, rgb(255, 244, 234) 100.2%);
+    width: 90%;
+    height: 300px;
+    justify-content: flex-start;    
+    text-shadow: 2px 2px 7px rgb(80, 82, 72);
+}
+
+.pizza-contenedor {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    background-image: radial-gradient(circle 827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(138, 192, 216) 90%);
+    width: 90%;
+    height: 300px;
+    justify-content: center;    
+    text-shadow: 2px 2px 7px rgb(80, 82, 72);
+}
+

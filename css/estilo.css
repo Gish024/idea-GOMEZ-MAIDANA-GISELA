@@ -1,0 +1,2061 @@
+/*Import*/
+/*Extend*/
+.medallones-contenedor, .mercaderia .tartas, .mercaderia .canelones, .mercaderia .medallones {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  background-image: radial-gradient(circle 400px at 6.8% 8.3%, rgb(255, 244, 169) 0%, rgb(255, 244, 234) 100.2%);
+  width: 90%;
+  height: 300px;
+  justify-content: flex-start;
+  text-shadow: 2px 2px 7px rgb(80, 82, 72);
+}
+
+.pizza-contenedor, .mercaderia .panqueques, .mercaderia .albondigas, .mercaderia .pizza {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  background-image: radial-gradient(circle 827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(138, 192, 216) 90%);
+  width: 90%;
+  height: 300px;
+  justify-content: center;
+  text-shadow: 2px 2px 7px rgb(80, 82, 72);
+}
+
+/*Declaracion de Mapa*/
+/* Declaracion de variables globales*/
+/*Anidacion o nesting header y navegacion*/
+/*Estilo para Header y barra de navegacion*/
+
+nav {
+  background-image: radial-gradient(circle 1259px at 2.8% 48.8%, rgb(255, 243, 110) 0%, rgb(30, 204, 214) 45.6%, rgb(5, 54, 154) 65.9%);
+  font-family: "Lora", serif;
+  max-width: 100%;
+  align-items: flex-end;
+  border-bottom: 3px solid rgb(68, 67, 67);
+  display: flex;
+  position: relative;
+}
+nav img {
+  height: 70px;
+  width: 70px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  animation-name: rotar_logo;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+@keyframes rotar_logo {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(50deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+nav h1 {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 3;
+  text-shadow: 3px 3px 8px rgb(78, 77, 2), 3px 3px 8px rgb(78, 77, 2), 3px 3px 8px rgb(78, 77, 2);
+  margin-right: 13px;
+  text-transform: uppercase;
+  padding: 5px;
+  /*Declaracion de variable Local*/
+  color: black;
+}
+nav h2 {
+  color: black;
+  font-size: 0.8em;
+  text-shadow: 2px 2px 7px rgb(46, 43, 43), 2px 2px 7px rgb(46, 43, 43);
+  margin-bottom: 25px;
+  margin-right: 1px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 3px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li:hover {
+  color: rgb(161, 243, 128);
+}
+nav ul li a {
+  color: rgb(248, 232, 10);
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 10px;
+}
+nav ul li a:hover {
+  color: rgb(161, 243, 128);
+}
+nav ul li a:active {
+  font-size: 20px;
+  color: blue;
+}
+nav ul li i {
+  color: rgba(247, 247, 240, 0.979);
+}
+nav ul li i:hover {
+  color: rgb(161, 243, 128);
+}
+nav .menu-bar {
+  display: none;
+}
+nav .shop {
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+
+/*Nesting Pagina Inicio*/
+/*Estilo para Pagina Inicio*/
+
+#grilla {
+  display: grid;
+  grid-template-areas: "seccion seccion seccion" "seccion seccion seccion" "seccion seccion publicidad";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 20% auto 20%;
+  height: 100vw;
+}
+
+section {
+  background-image: linear-gradient(174.2deg, rgb(255, 244, 228) 7.1%, rgb(240, 246, 238) 67.4%);
+  grid-area: seccion;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+}
+section h2 {
+  display: flex;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  line-height: 1.9;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 200;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  position: relative;
+  padding-top: 30px;
+  margin-top: 20px;
+  justify-content: center;
+  animation-name: rubberBand;
+  animation-duration: 3s;
+}
+section .presentacion {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 95%;
+  height: 400px;
+  background-image: linear-gradient(109.5deg, rgb(76, 221, 242) 11.2%, rgb(92, 121, 255) 91.1%);
+  margin-right: 30px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+section .presentacion img {
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 35%;
+  height: 350px;
+  box-shadow: 10px 20px 10px 0 #000;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 110px;
+  margin-right: 20px;
+}
+section .exposicion {
+  color: rgb(48, 41, 41);
+  position: relative;
+  display: flex;
+}
+section .exposicion h3 {
+  display: flex;
+  color: rgb(17, 116, 102);
+  font-size: 20px;
+  text-shadow: 2px 2px 7px rgb(247, 242, 242);
+  justify-content: flex-start;
+  position: absolute;
+  flex-direction: row;
+  left: 120px;
+  top: 30px;
+}
+section .exposicion p {
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-shadow: 2px 2px 7px rgb(156, 153, 153), 2px 2px 7px rgb(156, 153, 153);
+  justify-content: flex-start;
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  bottom: 15px;
+  text-decoration: wavy;
+}
+section .exposicion video {
+  width: 40%;
+  height: 300px;
+  margin-top: 140px;
+  margin-left: 190px;
+  margin-bottom: 15px;
+}
+
+/*Estilo para Aside*/
+
+aside {
+  grid-area: publicidad;
+  display: flex;
+  position: relative;
+}
+aside img {
+  width: 28%;
+  height: 420px;
+  position: absolute;
+  top: -435px;
+  left: 960px;
+}
+
+/*Nesting Footer*/
+/*Estilo para Footer*/
+
+footer {
+  background-image: linear-gradient(109.6deg, rgb(17, 181, 236) 11.2%, rgb(200, 227, 11) 91.1%);
+  height: 88px;
+  align-items: center;
+  color: rgb(59, 59, 58);
+  border-top: 3px solid rgb(49, 46, 46);
+  font-family: "Lora", serif;
+}
+footer h4 {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  text-decoration: wavy;
+  color: black;
+  font-size: 1, 2em;
+}
+footer h5 {
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+  text-decoration: none;
+  color: rgb(4, 49, 131);
+  font-size: 0.9em;
+}
+footer .redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+footer .redes-sociales img {
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+footer .redes-sociales a {
+  margin-top: 7px;
+  margin-left: 15px;
+}
+footer .redes-sociales p {
+  color: black;
+  font-size: 1em;
+  margin: 8px;
+}
+
+/*Nesting Pagina Nosotros*/
+/*Estilo para contenido Pagina Nosotros*/
+
+nav .bars {
+  display: none;
+}
+nav .shopping {
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+
+.jumbotron {
+  background-image: linear-gradient(174.2deg, rgb(255, 244, 228) 7.1%, rgb(240, 246, 238) 67.4%);
+  height: 173vw;
+}
+.jumbotron .container h1 {
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 200;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  justify-content: flex-start;
+  animation-name: backInDown;
+  animation-duration: 2s;
+  margin-left: 450px;
+  margin-bottom: 30px;
+}
+.jumbotron .container img {
+  height: 500px;
+  width: 700px;
+  box-shadow: 10px 20px 20px 0 #000;
+  margin-left: 210px;
+  margin-bottom: 30px;
+}
+.jumbotron .container p {
+  text-align: justify;
+  line-height: 1.5;
+  font-family: "Lora", serif;
+  margin: 15px;
+  padding-bottom: 10px;
+}
+.jumbotron .container1 h2 {
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 200;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  margin-left: 480px;
+}
+.jumbotron .container1 p {
+  font-family: "Lora", serif;
+  justify-content: center;
+  margin-left: 30px;
+}
+.jumbotron .container2 {
+  width: 90%;
+  margin-left: 60px;
+}
+.jumbotron .container2 .row .col-md-4 {
+  background-image: linear-gradient(359.8deg, rgb(252, 255, 222) 2.2%, rgb(182, 241, 171) 99.3%);
+  padding: 8px;
+}
+.jumbotron .container2 .row h3 {
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 200;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  margin-top: 20px;
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+.jumbotron .container2 .row p {
+  justify-content: center;
+  font-family: "Lora", serif;
+  text-align: justify;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+.End {
+  background-image: linear-gradient(109.6deg, rgb(17, 181, 236) 11.2%, rgb(200, 227, 11) 91.1%);
+  height: 120px;
+  align-items: center;
+  color: rgb(59, 59, 58);
+  border-top: 3px solid rgb(49, 46, 46);
+  font-family: "Lora", serif;
+}
+.End h4 {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  text-decoration: wavy;
+  color: black;
+  font-size: 18px;
+}
+.End h5 {
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+  text-decoration: none;
+  color: rgb(4, 49, 131);
+  font-size: 17px;
+}
+.End .contactos {
+  display: flex;
+  justify-content: center;
+}
+.End .contactos img {
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.End .contactos a {
+  margin-top: 7px;
+  margin-left: 15px;
+}
+.End .contactos p {
+  color: black;
+  font-size: 1em;
+  margin: 8px;
+}
+
+/*Nesting Pagina Productos*/
+/*Estilo para contenido Pagina Productos*/
+
+.mercaderia {
+  grid-template-areas: "medallones medallones medallones" "pizza pizza pizza" "canelones canelones canelones" "albondigas albondigas albondigas" "tartas tartas tartas" "panqueques panqueques panqueques";
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 20% auto 20%;
+  height: 150vw;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.mercaderia h2 {
+  display: flex;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 200;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  padding-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 550px;
+  animation-name: backInLeft;
+  animation-duration: 1s;
+}
+.mercaderia .medallones {
+  grid-area: medallones;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  margin-top: 20px;
+  margin-left: 70px;
+  padding-top: 30px;
+  padding-left: 60px;
+  transition-property: background-image;
+  transition-duration: 2s;
+}
+.mercaderia .medallones:hover {
+  background-image: linear-gradient(95.2deg, rgb(173, 252, 234) 26.8%, rgb(192, 229, 246) 64%);
+}
+.mercaderia .medallones ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 120px;
+  top: 90px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.mercaderia .medallones ul li {
+  color: rgb(46, 56, 39);
+}
+.mercaderia .medallones ul p {
+  color: rgb(21, 70, 63);
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.mercaderia .medallones img {
+  height: 250px;
+  width: 350px;
+  display: flex;
+  position: absolute;
+  box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);
+  top: 20px;
+  left: 650px;
+}
+.mercaderia .pizza {
+  grid-area: pizza;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  margin: 20px;
+  padding-top: 30px;
+  padding-left: 50px;
+  margin-left: 70px;
+  transition-property: background-image;
+  transition-duration: 2s;
+}
+.mercaderia .pizza:hover {
+  background-image: linear-gradient(359.8deg, rgb(252, 255, 222) 2.2%, rgb(182, 241, 171) 99.3%);
+}
+.mercaderia .pizza ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 670px;
+  top: 90px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.mercaderia .pizza ul li {
+  color: rgb(46, 56, 39);
+}
+.mercaderia .pizza ul p {
+  color: rgb(21, 70, 63);
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.mercaderia .pizza img {
+  display: flex;
+  height: 250px;
+  width: 350px;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);
+}
+.mercaderia .canelones {
+  grid-area: canelones;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  margin: 20px;
+  padding-top: 30px;
+  padding-left: 60px;
+  margin-left: 70px;
+  transition-property: background-image;
+  transition-duration: 2s;
+}
+.mercaderia .canelones:hover {
+  background-image: linear-gradient(95.2deg, rgb(173, 252, 234) 26.8%, rgb(192, 229, 246) 64%);
+}
+.mercaderia .canelones ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 160px;
+  top: 90px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.mercaderia .canelones ul li {
+  color: rgb(46, 56, 39);
+}
+.mercaderia .canelones ul p {
+  color: rgb(21, 70, 63);
+  margin-left: 90px;
+  margin-top: 20px;
+}
+.mercaderia .canelones img {
+  height: 250px;
+  width: 350px;
+  display: flex;
+  position: absolute;
+  box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);
+  top: 20px;
+  left: 650px;
+}
+.mercaderia .albondigas {
+  grid-area: albondigas;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  margin: 20px;
+  margin-left: 70px;
+  padding-top: 30px;
+  padding-left: 50px;
+  transition-property: background-image;
+  transition-duration: 2s;
+}
+.mercaderia .albondigas:hover {
+  background-image: linear-gradient(359.8deg, rgb(252, 255, 222) 2.2%, rgb(182, 241, 171) 99.3%);
+}
+.mercaderia .albondigas ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 670px;
+  top: 90px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.mercaderia .albondigas ul li {
+  color: rgb(46, 56, 39);
+}
+.mercaderia .albondigas ul p {
+  color: rgb(21, 70, 63);
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.mercaderia .albondigas img {
+  display: flex;
+  height: 250px;
+  width: 350px;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);
+}
+.mercaderia .tartas {
+  grid-area: tartas;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  margin: 20px;
+  padding-top: 30px;
+  padding-left: 60px;
+  margin-left: 70px;
+  transition-property: background-image;
+  transition-duration: 2s;
+}
+.mercaderia .tartas:hover {
+  background-image: linear-gradient(95.2deg, rgb(173, 252, 234) 26.8%, rgb(192, 229, 246) 64%);
+}
+.mercaderia .tartas ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 160px;
+  top: 90px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.mercaderia .tartas ul li {
+  color: rgb(46, 56, 39);
+}
+.mercaderia .tartas ul p {
+  color: rgb(21, 70, 63);
+  margin-left: 90px;
+  margin-top: 20px;
+}
+.mercaderia .tartas img {
+  height: 250px;
+  width: 350px;
+  display: flex;
+  position: absolute;
+  box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);
+  top: 20px;
+  left: 650px;
+}
+.mercaderia .panqueques {
+  grid-area: panqueques;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  margin: 20px;
+  padding-top: 30px;
+  padding-left: 90px;
+  margin-left: 70px;
+  transition-property: background-image;
+  transition-duration: 2s;
+}
+.mercaderia .panqueques:hover {
+  background-image: linear-gradient(359.8deg, rgb(252, 255, 222) 2.2%, rgb(182, 241, 171) 99.3%);
+}
+.mercaderia .panqueques ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 670px;
+  top: 90px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.mercaderia .panqueques ul li {
+  color: rgb(46, 56, 39);
+}
+.mercaderia .panqueques ul p {
+  color: rgb(21, 70, 63);
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.mercaderia .panqueques img {
+  display: flex;
+  height: 260px;
+  width: 350px;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);
+}
+
+/*Nesting Pagina Recetas*/
+/*Estilo para contenido Pagina Recetas*/
+
+.recetas {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  height: 140vw;
+  background-size: cover;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+.recetas h2 {
+  grid-column: 4/6;
+  grid-row: 1;
+  display: flex;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 200;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  padding-top: 30px;
+  margin-bottom: 30px;
+  animation-name: swing;
+  animation-duration: 1s;
+}
+.recetas p {
+  grid-column: 3/8;
+  grid-row: 1;
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 25%;
+  margin: auto;
+  text-align: center;
+  line-height: 1.5;
+  font-family: "Lora", serif;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-left: 40px;
+}
+.recetas video {
+  grid-column: 3/7;
+  grid-row: 2/3;
+  display: flex;
+  position: relative;
+  align-content: center;
+  width: 100%;
+}
+.recetas .primera {
+  display: flex;
+  grid-column: 1/4;
+  grid-row: 3/8;
+  position: relative;
+  box-sizing: border-box;
+  width: 98%;
+  height: 370px;
+  justify-content: center;
+  background-image: linear-gradient(359.8deg, rgb(252, 255, 222) 2.2%, rgb(182, 241, 171) 99.3%);
+  margin-left: 50px;
+  margin-top: 100px;
+}
+.recetas .primera h3 {
+  color: rgb(17, 116, 102);
+  font-size: 22px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 100;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  justify-content: center;
+  position: absolute;
+  top: -70px;
+  left: 5px;
+}
+.recetas .primera .estofado {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(62, 90, 56);
+  justify-content: center;
+  line-height: 1.8;
+  top: 10px;
+  padding: 15px;
+}
+.recetas .primera .estofado .titular {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Lora", serif;
+  text-decoration: underline;
+}
+.recetas .primera h4 {
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-weight: 100;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  justify-content: center;
+  position: absolute;
+  top: 390px;
+}
+.recetas .primera .indicaciones {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.recetas .primera .indicaciones ol {
+  line-height: 1.7;
+  justify-self: center;
+  text-align: justify;
+  position: absolute;
+  top: 450px;
+  left: 20px;
+  font-size: 18px;
+  font-family: "Lora", serif;
+}
+.recetas .primera .indicaciones ol li {
+  color: rgb(21, 70, 63);
+}
+.recetas .primera .indicaciones img {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  position: absolute;
+  box-shadow: 10px 10px 20px 0 rgb(51, 51, 48), 10px 10px 20px 0 rgb(51, 51, 48);
+  bottom: 10px;
+  left: 90px;
+  top: 870px;
+}
+.recetas .segunda {
+  display: flex;
+  grid-column: 5/8;
+  grid-row: 3/8;
+  position: relative;
+  box-sizing: border-box;
+  width: 98%;
+  height: 370px;
+  justify-content: center;
+  background-image: linear-gradient(359.8deg, rgb(252, 255, 222) 2.2%, rgb(182, 241, 171) 99.3%);
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-top: 100px;
+}
+.recetas .segunda h3 {
+  color: rgb(17, 116, 102);
+  font-size: 22px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 100;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  justify-content: center;
+  position: absolute;
+  top: -70px;
+  left: 5px;
+}
+.recetas .segunda .pizza {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(62, 90, 56);
+  justify-content: center;
+  line-height: 1.8;
+  top: 10px;
+  padding: 15px;
+}
+.recetas .segunda .pizza .encabezado {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(10, 48, 2);
+  text-decoration: underline;
+}
+.recetas .segunda h4 {
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-weight: 100;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  justify-content: center;
+  position: absolute;
+  top: 390px;
+}
+.recetas .segunda .pasos {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.recetas .segunda .pasos ol {
+  line-height: 1.7;
+  justify-self: center;
+  text-align: justify;
+  position: absolute;
+  top: 450px;
+  left: 20px;
+  font-size: 18px;
+  font-family: "Lora", serif;
+}
+.recetas .segunda .pasos ol li {
+  color: rgb(21, 70, 63);
+}
+.recetas .segunda .pasos img {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  position: absolute;
+  box-shadow: 10px 10px 20px 0 rgb(51, 51, 48), 10px 10px 20px 0 rgb(51, 51, 48);
+  bottom: 10px;
+  left: 90px;
+  top: 870px;
+}
+
+/*Nesting Pagina Contacto*/
+/*Estilo para contenido Pagina Contacto*/
+
+.medios {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  height: 60vw;
+  background-size: cover;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+.medios h2 {
+  display: flex;
+  grid-column: 4/5;
+  grid-row: 1;
+  color: rgb(17, 116, 102);
+  font-size: 25px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 200;
+  text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+  position: relative;
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 2px;
+  animation-name: heartBeat;
+  animation-duration: 1s;
+}
+.medios .flex-container {
+  display: flex;
+  grid-column: 2/7;
+  grid-row: 2/7;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(89, 201, 245);
+  margin: 20px;
+  width: 450px;
+  margin-left: 270px;
+  border: 14px solid rgb(5, 4, 31);
+  outline: 3px solid rgb(6, 146, 240);
+  padding: 20px;
+  box-shadow: 2px 6px 20px #000;
+}
+.medios .flex-container .form {
+  min-width: 500px;
+  flex: 2;
+  text-align: center;
+  padding: 30px;
+}
+.medios .flex-container .form .form-input {
+  width: 50%;
+  padding: 7px;
+  margin: 6px 0;
+  border: none;
+  border-bottom: 3px solid rgb(6, 146, 240);
+  outline: none;
+  background: rgb(62, 87, 124);
+  color: rgb(249, 252, 252);
+}
+.medios .flex-container .form .form-input:focus {
+  background: linear-gradient(to bottom, transparent, rgb(110, 110, 99));
+  outline: none;
+  border-bottom: 3px solid rgb(146, 248, 209);
+}
+.medios .flex-container .form .form-input [type=submit] {
+  background-color: rgb(7, 4, 175);
+  border-bottom: none;
+  padding: 10px;
+}
+.medios .flex-container .form .form-input [type=submit]:hover {
+  background-color: rgb(78, 75, 247);
+  border-bottom: none;
+  padding: 10px;
+}
+.medios .flex-container .form .form-input [type=submit]:focus {
+  background-color: rgb(146, 248, 209);
+}
+.medios .flex-container .form .form-input [type=submit]:active {
+  background-color: linear-gradient(to bottom, transparent, rgb(110, 110, 99));
+}
+.medios .flex-container .form textarea {
+  min-height: 150px;
+  resize: none;
+}
+.medios h3 {
+  grid-column: 2/7;
+  grid-row: 8;
+  display: flex;
+  color: rgb(32, 29, 29);
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 7px rgb(46, 43, 43);
+  position: relative;
+  margin-left: 150px;
+}
+
+/*# sourceMappingURL=estilo.css.map */
+/*Responsive hasta 600px para Header y Footer de todas las Paginas*/
+
+@media screen and (max-width: 600px) {
+  .navbar {
+      position: relative;
+  }
+  .navbar .shop {
+      display: none;
+  }
+  .navbar .menu-bar {
+      display: block;        
+      font-size: 50px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      margin-left: 40px;
+  }
+  .navbar .menu{
+      display: none;
+  }
+  .navbar .Logo {
+      margin-bottom: 20px;
+  }
+
+  .pieDepagina {
+      height: 110px;
+  }
+  .pieDepagina .desarrollador {
+      font-size: 15px;
+      margin-top: 10px;
+  }
+  .pieDepagina .seguime {
+      display: none;
+  }
+  .pieDepagina .redes-sociales{
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      justify-content: space-around; 
+      margin-left: 20px;    
+  }    
+  .redes-sociales img{
+      margin-top: 18px;             
+  }
+  .redes-sociales a {
+      margin-top: 18px;
+      margin-left: 2px;        
+      font-size: 14px;
+  }
+  .redes-sociales p {        
+      font-size: 14px;
+      margin-top: 18px;
+  }       
+  
+  /*Responsive hasta 600px para Pagina Inicio*/
+
+  #grilla {
+      display: grid; 
+      grid-template-areas: "seccion seccion"
+                           "seccion seccion"
+                           "publicidad publicidad";                              
+      grid-template-rows: 1fr 1fr 1fr; 
+      grid-template-columns: 20% 20%;
+      height: 180vw; 
+  }
+  .seccion {
+      background-color: rgb(243, 240, 201);
+  }
+
+  .seccion h2 {
+      font-size: 20px;
+
+  }
+  .seccion .presentacion {
+      width: 90%;
+      height: 650px;
+      background: rgb(220, 245, 163);
+      flex-direction: column;
+  }
+  .presentacion img {
+      width: 70%;
+      height: 290px;
+      margin-left: 70px;        
+  }
+  .exposicion h3 {
+      font-size: 15px;
+  }
+  .exposicion p {
+      font-size: 15px;
+      text-align: center;
+      left: 10px;       
+  }
+  .exposicion video {
+      width: 80%;
+      height: 300px;
+      margin-top: 110px;
+      margin-left: 50px;
+      margin-bottom: 10px;
+  }
+  .publicidad img {
+      position: relative;
+      width: 80%;
+      height: 300px;
+      margin-left: -900px;
+      margin-top: 500px;
+      margin-bottom: -350px;                  
+  }       
+
+  /*Responsive hasta 600px para Pagina Nosotros*/
+  
+  #contenido p {
+      width: 90%;
+      margin-top: 20px;
+      margin-bottom: -200px;
+      font-size: 15px;
+  }
+  #contenido img {
+      position: relative;
+      margin-left: -840px;
+      width: 400px;        
+  }
+  #productos h3 {
+      font-size: 20px;
+      margin-top: 220px;
+  }
+  #productos p {
+      text-align: justify;
+      margin-left: 20px;
+      padding-top: 10px;
+      padding-left: 0;
+  }
+  #productos .legumbres {         
+      height: 1180px;
+      width: 95%;       
+      margin-left: 12px;
+      margin-top: 20px;
+      flex-direction: column;                             
+  }
+  .legumbres h4 {
+      font-size: 20px;
+      justify-content: flex-start;        
+  }
+  .legumbres p {
+      font-size: 15px;                    
+  }
+  .legumbres img {
+      position: relative;
+      width: 300px;
+      margin-top: 350px;
+      margin-left: 110px;
+  }
+  #productos .cereales {
+      height: 1000px;        
+      margin-left: 12px;
+      margin-top: 20px;
+      flex-direction: column;        
+  }
+  .cereales h4 {
+      font-size: 20px;
+      position: relative;        
+      justify-content: flex-start;
+      margin-left: 80px;   
+      margin-top: 15px;   
+  }
+  .cereales p {
+      font-size: 15px;
+  }
+  .cereales img {
+      position: absolute;
+      width: 300px;
+      top: 650px;
+      left: 130px;
+  }
+  #productos .verdura {
+      height: 900px;        
+      margin-left: 12px;
+      margin-top: 20px;
+      flex-direction: column;        
+  }
+  .verdura h4 {
+      font-size: 20px;
+      justify-content: flex-start;        
+  }
+  .verdura p {
+      font-size: 15px;
+      padding-top: 40px;
+  }
+  .verdura img {
+      position: absolute;
+      width: 300px;
+      top: 545px;
+      left: 110px;
+  }
+   /*Responsive hasta 600px para Pagina Productos*/
+  
+  .mercaderia { 
+      height: 692vw;       
+      background: rgb(232, 243, 205);
+      flex-direction: column;
+  }
+  .mercaderia h2 {
+      font-size: 20px;
+      margin-left: 230px;
+  }
+  .mercaderia .medallones {
+      width: 85%;
+      height: 1200px; 
+      flex-direction: column;
+      margin-left: 45px;
+      font-size: 15px;
+  }
+  .medallones-ul {
+      font-size: 15px;
+  }
+  .mercaderia .imagenes {
+      width: 300px;  
+      height: 250px;        
+      flex-direction: column;
+      top: 470px;
+      left: 150px;
+  }
+  .mercaderia .pizza {
+      width: 85%;
+      height: 520px; 
+      flex-direction: column;
+      margin-left: 45px;
+      justify-content: flex-start;
+      font-size: 15px;
+  }
+  .pizza-ul {
+      left: 120px;
+      top: 1500px;
+      font-size: 15px;
+  }
+  .mercaderia .foto-pizza {
+      top: 1635px;
+      left: 130px;
+  }
+  .mercaderia .canelones {
+      width: 85%;
+      height: 520px; 
+      flex-direction: column;
+      margin-left: 45px;
+      justify-content: flex-start;
+      font-size: 15px;
+  }
+  .canelones-ul {
+      left: 120px;
+      top: 2050px;
+      font-size: 15px;
+  }
+  .mercaderia .foto-canelones {
+      top: 2160px;
+      left: 130px;
+  }
+  .mercaderia .albondigas {
+      width: 85%;
+      height: 520px; 
+      flex-direction: column;
+      margin-left: 45px;
+      justify-content: flex-start;
+      font-size: 15px;
+  }
+  .albondigas-ul {
+      left: 120px;
+      top: 2580px;
+      font-size: 15px;
+  }
+  .mercaderia .foto-albondigas {
+      top: 2710px;
+      left: 130px;
+  }
+  .mercaderia .tartas {
+      width: 85%;
+      height: 480px; 
+      flex-direction: column;
+      margin-left: 45px;
+      justify-content: flex-start;
+      font-size: 15px;
+  }
+  .tartas-ul {
+      left: 120px;
+      top: 3110px;
+      font-size: 15px;
+  }
+  .mercaderia .fotoespinaca {
+      top: 3235px;
+      left: 130px;
+  }
+  .mercaderia .panqueques {
+      width: 85%;
+      height: 520px; 
+      flex-direction: column;
+      margin-left: 45px;
+      justify-content: flex-start;
+      font-size: 15px;
+  }
+  .panqueques-ul {
+      left: 120px;
+      top: 3650px;
+      font-size: 15px;
+  }
+  .mercaderia .foto-panqueque {
+      top: 3735px;
+      left: 130px;
+  }
+  /*Responsive hasta 600px para Pagina Recetas*/
+
+.recetas {                      
+  height: 350vw;        
+}
+.recetas h2 {        
+  font-size: 20px;
+  grid-column: 3/7;
+}
+.recetas p {
+  font-size: 15px;        
+}
+.recetas video { 
+  grid-column: 2/7;
+  grid-row: 2;  
+  height: 270px;
+  margin-left: 40px;
+  margin-top: -100px;
+}
+.recetas .primera {
+  grid-column: 1/8;
+  grid-row: 3/5;       
+  flex-direction: column;
+  width: 80%;
+  height: 270px; 
+  margin-left: 80px;
+  padding-left: 20px;
+  margin-top: 5px;                        
+}
+.recetas .primera h3 {
+  font-size: 15px;
+  top: -50px;
+  left: 50px;
+}
+.recetas .primera .estofado {
+  font-size: 12px;
+  top: 2px;
+  padding-right: 30px;
+}
+.recetas .primera .estofado .titular {
+  font-size: 15px;
+}
+.receta .primera h4 {
+  font-size: 15px;
+  top: 200px;    
+}
+.receta .primera .indicaciones {
+  margin-top: -185px;
+}
+.receta .primera .indicaciones ol li {
+  font-size: 12px;        
+}
+.receta .primera .indicaciones img {
+  width: 65%;
+  top: -970px;        
+}
+.recetas .segunda {
+  grid-column: 1/8;
+  grid-row: 6/8; 
+  flex-direction: column;
+  width: 75%;
+  height: 270px; 
+  margin-left: 70px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+.receta .segunda h3 {
+  font-size: 15px;
+  top: -30px;
+  left: 50px;
+}
+.receta .segunda .pizza {
+  font-size: 12px;
+  top: 2px;
+  padding-right: 30px;
+}
+.receta .segunda .pizza .encabezado {
+  font-size: 15px;
+}
+.receta .segunda h4 {
+  font-size: 15px;
+  top: 300px;
+}
+.receta .segunda .pasos {
+  margin-top: -145px;
+}
+.receta .segunda .pasos ol {
+  font-size: 12px;        
+}
+.receta .segunda .pasos img {
+  width: 65%;
+  top: -1000px;
+}
+/*Responsive hasta 600px para Pagina Contacto*/
+
+.medios {    
+  height: 100vw;
+}
+.medios h2 {        
+  grid-column: 2/4;
+  font-size: 20px;
+  margin-left: 100px; 
+}
+.medios .flex-container {        
+  grid-column: 1/5;
+  grid-row: 2/7;
+  margin-left: 45px;
+  height: 400px;
+}
+.medios .flex-container .form {
+  min-width: 450px;  
+  padding: 20px;
+}
+.medios .flex-container .form .form-input {
+  width: 50%;
+  padding: 5px;
+  margin: 5px 0;
+}
+.medios h3 {
+  font-size: 15px;
+  grid-column: 1/4;
+  text-align: center;        
+  margin-top: -20px;  
+}
+}
+
+/*Responsive desde 601px hasta 900px para Header y Footer de todas las Paginas*/
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+  /*Header y nav*/
+
+nav {
+  position: relative;
+}
+nav .menu-bar {
+  display: block;        
+  font-size: 50px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  margin-left: 150px;
+}
+nav ul{
+    display: none;
+}
+nav img {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+nav h1 {
+  margin-left: 20px;  
+}
+nav .bars {
+  display: block;        
+  font-size: 50px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  margin-left: 150px;
+}
+
+/*Footer*/
+
+footer {
+  height: 110px;
+}
+footer h4 {
+  font-size: 15px;
+  margin-top: 10px;
+}
+footer h5 {
+  display: none;
+}
+footer .redes-sociales {
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  margin-left: 20px;    
+}    
+footer .redes-sociales img{
+  margin-top: 18px;             
+}
+footer .redes-sociales a {
+  margin-top: 18px;
+  margin-left: 2px;        
+  font-size: 14px;
+}
+footer .redes-sociales p {        
+  font-size: 14px;
+  margin-top: 18px;
+} 
+  
+/* Responsive desde 601px hasta 900px para Pagina Inicio*/
+
+section .presentacion {    
+  margin-right: 20px;
+  margin-top: 50px; 
+  margin-left: 20px;
+  padding-top: 30px;   
+}
+section .presentacion img {
+  width: 90%;
+  height: 290px;
+  margin-left: 30px;          
+}
+section .exposicion h3 {
+  font-size: 20px;
+  margin-left: 70px;
+}
+section .exposicion p {
+  font-size: 15px;       
+  left: 100px;       
+}
+section .exposicion video {
+  width: 60%;        
+  margin-left: 160px;        
+}
+aside img { 
+  position: relative;       
+  width: 75%;
+  height: 350px;
+  margin-left: -850px;
+  margin-top: 470px;
+  margin-bottom: -400px;                  
+} 
+  
+/*Responsive desde 601px hasta 900px para Pagina Nosotros*/
+
+.jumbotron {
+  height: 270vw;
+}
+.jumbotron .container h1 {  
+  margin-left: 280px;      
+}
+.jumbotron .container img {
+  margin-left: 10px;
+}
+.jumbotron .container1 h2 {
+  margin-left: 280px;
+}
+.jumbotron .container2 {
+  width: 100%;
+  margin: 1px;
+}
+.jumbotron .row .col-md-4 h3 {
+  font-size: 20px;
+}
+.jumbotron .row .col-md-4 p {
+  font-size: 14px;
+}
+  
+/*Responsive desde 601px hasta 900px para Pagina Productos*/
+
+.mercaderia { 
+  height: 260vw;       
+  flex-direction: column;
+}
+.mercaderia h2 {        
+  margin-left: 350px;
+}
+.mercaderia .medallones {
+  width: 95%;
+  height: 350px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;
+  font-size: 20px;
+}
+.mercaderia .medallones ul {
+  font-size: 15px;
+  top: 90px;
+}
+.mercaderia .medallones img {  
+  left: 450px;
+  top: 50px;
+}    
+.mercaderia .pizza {
+  width: 95%;
+  height: 350px; 
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;        
+  font-size: 20px;        
+}
+.mercaderia .pizza ul {
+  left: 450px;     
+  font-size: 15px;
+}
+.mercaderia .pizza img {
+  top: 70px;
+  left: 60px;
+}
+.mercaderia .canelones {
+  width: 95%;
+  height: 350px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;
+  font-size: 20px;
+}
+.mercaderia .canelones ul {
+  font-size: 15px;
+  top: 90px;
+  left: 120px;
+}
+.mercaderia .canelones img {
+  left: 450px;
+  top: 50px;
+}   
+.mercaderia .albondigas {
+  width: 95%;
+  height: 350px; 
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;        
+  font-size: 20px; 
+}
+.mercaderia .albondigas ul {
+  left: 480px;     
+  font-size: 15px;
+}
+.mercaderia .albondigas img {
+  top: 70px;
+  left: 60px;
+}
+.mercaderia .tartas {
+  width: 95%;
+  height: 350px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;
+  font-size: 20px;
+}
+.mercaderia .tartas ul {
+  font-size: 15px;
+  top: 90px;
+  left: 100px;
+}
+.mercaderia .tartas ul p {          
+  margin-left: 30px;        
+}
+.mercaderia .tartas img {
+  left: 450px;
+  top: 50px;
+}
+.mercaderia .panqueques {
+  width: 95%;
+  height: 350px; 
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;        
+  font-size: 20px; 
+}
+.mercaderia .panqueques ul {
+  left: 500px;     
+  font-size: 15px;
+}
+.mercaderia .panqueques img {
+  top: 70px;
+  left: 60px;
+}
+/*Responsive desde 601px hasta 900px para Pagina Recetas*/
+
+.recetas {                      
+  height: 270vw;        
+}
+.recetas h2 {     
+  grid-column: 3/7;
+  margin-left: 40px;
+}
+.recetas p {
+  font-size: 15px;        
+}
+.recetas video { 
+  grid-column: 2/7;
+  grid-row: 2;  
+  height: 270px;
+  margin-left: 90px;
+  margin-top: -170px;
+  width: 80%;
+}
+.recetas .primera {
+  grid-column: 2/8;
+  grid-row: 3/6;       
+  flex-direction: column;
+  width: 80%;
+  height: 320px; 
+  margin-top: -100px;        
+  padding-left: 110px;                        
+}
+.recetas .primera h3 {
+  font-size: 20px;
+  top: -60px;
+  left: 50px;
+}
+.recetas .primera .estofado {
+  font-size: 15px;
+  top: 2px;
+  padding-right: 30px;
+}
+.recetas .primera .estofado .titular {
+  font-size: 15px;
+}
+.recetas .primera h4 {
+  font-size: 18px;
+  top: 330px; 
+  left: 100px;   
+}
+.recetas .primera .indicaciones {
+  top: -250px;
+}
+.recetas .primera .indicaciones ol li {
+  font-size: 15px;        
+}
+.recetas .primera .indicaciones img {
+  width: 75%;
+  top: 790px;
+  left: 30px;          
+}
+.recetas .segunda {
+  grid-column: 2/8;
+  grid-row: 6/8; 
+  flex-direction: column;
+  width: 80%;
+  height: 320px; 
+  margin-left: 70px;        
+  padding-left: 110px;
+  margin-top: -5px;  
+}
+.recetas .segunda h3 {
+  font-size: 20px;
+  top: -40px;
+  left: 130px;
+}
+.recetas .segunda .pizza {
+  font-size: 15px;
+  top: 2px;
+  padding-right: 30px;
+}
+.recetas .segunda .pizza .encabezado {
+  font-size: 15px;
+}
+.recetas .segunda h4 {
+  font-size: 18px;
+  top: 330px;
+}
+.recetas .segunda .pasos {
+  top: -235px;
+}
+.recetas .segunda .pasos ol li {
+  font-size: 15px;        
+}
+.recetas .segunda .pasos img {
+  width: 85%;
+  top: 750px;
+  left: 30px;
+}
+
+  /*Responsive desde 601px hasta 900px para Pagina Contacto*/
+
+.medios {    
+  height: 80vw;
+}
+.medios h2 {        
+  grid-column: 3/6;
+  font-size: 25px;
+  margin-left: 190px;
+  margin-bottom: 20px; 
+}
+.medios .flex-container {        
+  grid-column: 3/7;
+  grid-row: 2/7;
+  margin-left: 45px;
+  height: 450px;
+}
+.medios .flex-container .form {
+  min-width: 450px;  
+  padding: 20px;
+}
+.medios .flex-container .form .form-input {
+  width: 50%;
+  padding: 5px;
+  margin: 5px 0;
+}
+.medios h3 {
+  font-size: 18px;
+  grid-column: 2/8;
+  text-align: center;        
+  margin-top: -20px; 
+  margin-left: 95px; 
+  }
+}
+
+/*Responsive desde 901px hasta 1024px para Header y Footer de todas las Paginas*/
+
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+
+/*Header y nav*/
+
+nav {
+  position: relative;
+  height: 100px;
+}
+nav .menu-bar {
+  display: none
+}
+nav img {
+  margin-left: 10px;
+}
+nav h1 {
+  margin-left: 10px;
+  margin-right: 1px;
+  padding: 1px;
+}
+nav ul {
+  font-size: 0.9em;        
+  padding: 8px;
+}
+nav ul li a {
+  font-size: 13px;
+}
+nav ul li i {
+  display: none;
+}
+nav .shop {
+  display: none;
+}
+
+/*Responsive desde 901px hasta 1024px para Pagina Inicio*/
+
+section .presentacion {     
+  margin-right: 25px;    
+  margin-left: 25px;   
+}
+section .presentacion img {    
+  margin-left: 80px;            
+}
+section .exposicion h3 {   
+  left: 220px;    
+}
+section .exposicion video {
+  width: 40%;
+  height: 300px;
+  margin-top: 100px; 
+  margin-left: 50px; 
+  margin-bottom: 15px;      	    
+}
+aside img {
+  width: 35%;
+  height: 280px;        
+  top: -290px;
+  left: 610px;
+}
+
+/*Responsive desde 901px hasta 1024px para Pagina Nosotros*/
+
+nav .shopping{
+  display: none;    
+}
+.jumbotron{
+  height: 235vw;
+}
+.jumbotron .container h1 {
+  margin-left: 380px;
+}
+.jumbotron .container img {
+  margin-left: 110px;
+}
+.jumbotron .container1 h2 {
+  margin-left: 380px;
+}
+.jumbotron .container2 {
+  width: 95%;
+  margin-left: 20px;
+}
+.jumbotron .container2 .row p {
+  font-size: 15px;
+}
+  
+/*Responsive desde 901px hasta 1024px para Pagina Productos*/
+
+.mercaderia {    
+  height: 200vw;    
+}
+.mercaderia h2 {
+  margin-left: 450px; 
+}
+.mercaderia .medallones {
+  width: 95%;  
+  margin-left: 25px;
+  font-size: 20px;
+}
+.mercaderia .medallones ul {   
+  font-size: 16px;
+}
+.mercaderia .medallones img {
+  width: 300px;  
+  height: 250px;
+  left: 530px;    
+}    
+.mercaderia .pizza { 
+  width: 95%;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.mercaderia .pizza ul {
+  font-size: 16px;
+  left: 500px;
+}
+.mercaderia .pizza img {
+  left: 100px;
+  width: 300px;
+  height: 260px;  
+}
+.mercaderia .canelones { 
+  width: 95%;  
+  margin-left: 25px;
+  font-size: 20px;
+}
+.mercaderia .canelones ul {
+  font-size: 16px;        
+}
+.mercaderia .canelones img { 
+  width: 300px;  
+  height: 250px;
+  left: 530px; 
+}
+.mercaderia .albondigas {
+  width: 95%;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.mercaderia .albondigas ul {
+  font-size: 16px;
+  left: 500px;
+}
+.mercaderia .albondigas img {
+  left: 100px;
+  width: 300px;
+  height: 260px;
+}
+.mercaderia .tartas {
+  width: 95%;  
+  margin-left: 25px;
+  font-size: 20px;
+}
+.mercaderia .tartas ul {
+  font-size: 16px;
+  left: 100px;
+}
+.mercaderia .tartas img {
+  width: 300px;  
+  height: 250px;
+  left: 530px;
+}
+.mercaderia .panqueques { 
+  width: 95%;
+  margin-left: 25px;
+  font-size: 20px;
+  padding-left: 220px;
+}
+.mercaderia .panqueques ul {
+  font-size: 16px;
+  left: 600px;
+}    
+.mercaderia .panqueque img {
+  left: 100px;
+  width: 300px;
+  height: 250px;
+}
+
+/*Responsive desde 901px hasta 1024px para Pagina Recetas*/
+
+.recetas {
+  height: 170vw;
+}
+.recetas h2 {
+  grid-column: 3/6;
+  margin-left: 80px;
+}
+.recetas p {
+  font-size: 17px;
+}     
+.recetas .primera {
+  width: 100%;    
+  margin-left: 50px;
+  margin-top: 90px;
+}
+.recetas .primera h3 {
+  top: -50px;
+  left: -35px;
+  font-size: 20px;
+}      
+.recetas .primera .estofado {
+  font-size: 15px;
+}
+.recetas .primera h4 {
+  top: 390px;
+  font-size: 18px;
+}
+.recetas .primera .indicaciones ol {
+  font-size: 15px;
+}
+.recetas .primera .indicaciones img {
+  bottom: 10px;
+  left: 40px; 
+  top: 840px;
+  width: 80%;
+}
+.recetas .segunda {
+  width: 100%;    
+  margin-left: 40px;
+  margin-top: 90px;
+}
+.recetas .segunda h3 {
+  top: -50px;
+  left: 40px;
+  font-size: 20px;
+}
+.recetas .segunda .pizza {
+  font-size: 15px;
+}
+.recetas .segunda h4 {
+  top: 390px;
+  font-size: 18px;
+}
+.recetas .segunda .pasos ol {
+  font-size: 15px;
+  top: 450px;
+}
+.recetas .segunda .pasos img {
+  bottom: 10px;
+  left: -10px; 
+  top: 850px;
+  width: 90%;
+} 
+  
+ /* Responsive desde 901px hasta 1024px para Pagina Contacto*/ 
+  
+  .medios {    
+    height: 70vw;
+  }
+  .medios h2 {
+    grid-column: 4/6;
+  }
+  .medios .flex-container {    
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    margin-left: 160px;
+  }
+  .medios h3 {
+    grid-column: 2/8;
+    margin-left: 40px;        
+  }
+}

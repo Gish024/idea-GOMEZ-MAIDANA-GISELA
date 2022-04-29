@@ -1,0 +1,1075 @@
+/*Import*/
+
+@import "colores";
+@import "extend";
+@import "mixins";
+@import "mapa";
+
+/* Declaracion de variables globales*/
+
+$color-fuente: rgb(17, 116, 102);
+$titulo-px: 25px;
+$subtitulo-px: 20px;
+
+
+/*Anidacion o nesting header y navegacion*/
+
+nav {
+    background-image: map-get($map: $fondos, $key: barra);
+    font-family: $tipografia-base;
+    max-width: 100%;    
+    align-items:flex-end; 
+    border-bottom: 3px solid rgb(68, 67, 67);
+    display: flex;
+    position: relative;
+
+    img {
+        @include sizes(70px,70px);            
+        margin-left: 20px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        animation-name: rotar_logo;
+        animation-iteration-count: infinite; 
+        animation-timing-function: ease;
+        animation-duration: 3s; 
+        animation-delay: 3s;
+        @keyframes rotar_logo {
+            0%{
+                transform: rotateX(0deg);
+            }
+            50%{
+                transform: rotateX(50deg);
+            }
+            100%{
+                transform: rotateX(0deg);
+            }
+        }
+    }
+
+    h1 {
+        font-size: 1.5em;    
+        font-weight: 300;
+        line-height: 3;         
+        text-shadow: 3px 3px 8px rgb(78, 77, 2), 3px 3px 8px rgb(78, 77, 2), 3px 3px 8px rgb(78, 77, 2);
+        margin-right: 13px;
+        text-transform: uppercase;
+        padding: 5px;
+        /*Declaracion de variable Local*/
+        $color-titulo: black;
+        color:$color-titulo;
+    }
+
+    h2 {
+        color: black;
+        font-size: 0.8em;              
+        text-shadow: 2px 2px 7px rgb(46, 43, 43), 2px 2px 7px rgb(46, 43, 43);
+        margin-bottom: 25px;
+        margin-right: 1px;
+    }
+
+    ul {
+        display:flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 3px;            
+
+        li {
+            list-style: none;
+            &:hover {
+                color: rgb(161, 243, 128);
+            }
+
+            a {
+                color: rgb(248, 232, 10);
+                text-decoration: none;
+                font-size: 17px; 
+                cursor: pointer;
+                padding: 10px;
+                &:hover {
+                    color: rgb(161, 243, 128);    
+                }
+                &:active {
+                    font-size: 20px;
+                    color: blue;
+                }
+            }
+
+            i {
+                color: rgba(247, 247, 240, 0.979);
+                &:hover {
+                    color: rgb(161, 243, 128);
+                }
+            }
+        } 
+        
+    }
+    .menu-bar {
+        display: none;
+    }
+    .shop {
+        margin-left: 70px;
+        margin-bottom: 50px;
+    }
+}
+/*Nesting Pagina Inicio*/
+
+#grilla {    
+    display: grid;    
+    grid-template-areas: "seccion seccion seccion"
+                         "seccion seccion seccion"
+                         "seccion seccion publicidad";
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-columns: 20% auto 20%;
+    height: 100vw;
+}
+
+section {
+    background-image: map-get($map: $fondos, $key: pagina1);
+    grid-area: seccion;
+    display: flex;
+    flex-direction: column;    
+    background-size: cover;
+    background-position: center;
+
+    h2 {    
+        display: flex;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;
+        line-height: 1.9;    
+        font-weight: bold; 
+        text-decoration: underline;      
+        font-weight: 200;     
+        text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165); 
+        position: relative;   
+        padding-top: 30px;    
+        margin-top: 20px;
+        justify-content: center;
+        animation-name: rubberBand;
+        animation-duration: 3s;  
+    }
+
+    .presentacion {        
+        position: relative;
+        display: flex;
+        box-sizing: border-box;
+        width: 95%;
+        height: 400px;
+        background-image: linear-gradient( 109.5deg,  rgba(76,221,242,1) 11.2%, rgba(92,121,255,1) 91.1% ); 
+        margin-right: 30px;
+        margin-top: 40px; 
+        margin-left: 30px;   
+        
+        img {
+            display: flex;    
+            box-sizing: border-box;
+            border-radius: 50%;    
+            width: 35%;
+            height: 350px;
+            box-shadow: 10px 20px 10px 0 #000;
+            position: relative;    
+            margin-top: 20px; 
+            margin-left: 110px; 
+            margin-right: 20px;   
+        }
+    }
+
+    .exposicion {    
+        color:rgb(48, 41, 41);
+        position: relative;
+        display: flex;
+        
+        h3 {
+            display: flex;
+            color: $color-fuente;
+            font-size: $subtitulo-px;
+            text-shadow: 2px 2px 7px rgb(247, 242, 242);
+            justify-content: flex-start;
+            position: absolute;  
+            flex-direction: row;
+            left: 120px;
+            top: 30px;       
+        }
+
+        p {
+            display:flex;
+            color: rgb(0,0,0);
+            font-size: $subtitulo-px;                
+            text-shadow: 2px 2px 7px rgb(156, 153, 153), 2px 2px 7px rgb(156, 153, 153);
+            justify-content: flex-start;
+            position: absolute;    
+            top: 80px;
+            left: 40px;
+            bottom: 15px;
+            text-decoration: wavy;
+        }
+
+        video {
+            width: 40%;
+            height: 300px;
+            margin-top: 140px; 
+            margin-left: 190px; 
+            margin-bottom: 15px;      	    
+        }
+    }
+}
+aside {
+    grid-area: publicidad;    
+    display: flex;
+    position: relative;
+
+    img {
+    width: 28%;
+    height: 420px;
+    position: absolute;
+    top: -435px;
+    left: 960px;
+    }
+}
+/*Nesting Footer*/
+
+footer {
+    background-image: map-get($map: $fondos, $key: pie);
+    height: 88px;
+    align-items: center;
+    color: rgb(59, 59, 58);
+    border-top: 3px solid rgb(49, 46, 46);
+    font-family: $tipografia-base;    
+
+    h4 {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        text-decoration: wavy;
+        color: black;
+        font-size: 1,2em;
+    }
+
+    h5 {
+        display: flex;
+        justify-content: center;
+        font-weight: 100;
+        text-decoration: none;
+        color: rgb(4, 49, 131);
+        font-size: 0.9em;
+    }
+
+    .redes-sociales{    
+        display: flex;
+        justify-content: center;
+        
+        img {
+            @include sizes(20px,20px);            
+            margin-top: 5px;
+            margin-left: 15px; 
+        } 
+        a {
+            margin-top: 7px;
+            margin-left: 15px;
+        }
+
+        p {
+            color: black;
+            font-size: 1em;
+            margin: 8px;
+        }
+    }
+}
+
+//Nesting Pagina Nosotros
+
+nav {
+    .bars {
+        display: none;
+    }
+    .shopping {
+        margin-left: 70px;
+        margin-bottom: 50px;
+    }
+}
+
+.jumbotron {
+    background-image: map-get($map: $fondos, $key: pagina1);
+    height: 173vw;   
+    
+    .container {
+                                        
+        h1 {
+            color: $color-fuente;
+            font-size: $titulo-px;
+            font-family: $tipografia-base;                
+            font-weight: bold; 
+            text-decoration: underline;      
+            font-weight: 200;     
+            text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+            justify-content: flex-start;                 
+            animation-name: backInDown;
+            animation-duration: 2s; 
+            margin-left: 450px; 
+            margin-bottom: 30px;                      
+        }
+    
+        img {
+            @include sizes(700px,500px);                
+            box-shadow: 10px 20px 20px 0 #000;
+            margin-left: 210px;
+            margin-bottom: 30px;
+        }
+        
+        p {
+           text-align: justify;
+           line-height: 1.5;
+           font-family: $tipografia-base;
+           margin: 15px;
+           padding-bottom: 10px;
+        }
+    }    
+    .container1 {
+        
+        h2 {
+            color: $color-fuente;
+            font-size: $titulo-px;
+            font-family: $tipografia-base;     
+            font-weight: bold; 
+            text-decoration: underline;      
+            font-weight: 200;     
+            text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+            margin-left: 480px;
+        }
+
+        p {
+            font-family: $tipografia-base;
+            justify-content: center;
+            margin-left: 30px;
+        }
+    }
+    .container2 {
+        width: 90%;
+        margin-left: 60px; 
+
+        .row {
+            
+            .col-md-4 {
+                background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+                padding: 8px;
+            }           
+
+            h3 {
+                color: $color-fuente;
+                font-size: $titulo-px;
+                font-family: $tipografia-base;
+                font-size: 25px;     
+                font-weight: bold; 
+                text-decoration: underline;      
+                font-weight: 200;     
+                text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+                margin-top: 20px;
+                margin-left: 110px;
+                margin-bottom: 30px;
+            }
+
+            p {
+                justify-content: center;
+                font-family: $tipografia-base;
+                text-align: justify;
+                line-height: 1.5;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+.End {
+    background-image: map-get($map: $fondos, $key: pie);    
+    height: 120px;
+    align-items: center;   
+    color: rgb(59, 59, 58);
+    border-top: 3px solid rgb(49, 46, 46);
+    font-family: $tipografia-base; 
+
+    h4 {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        text-decoration: wavy;
+        color: black;
+        font-size: 18px;
+    }
+
+    h5 {
+        display: flex;
+        justify-content: center;
+        font-weight: 100;
+        text-decoration: none;
+        color: rgb(4, 49, 131);
+        font-size: 17px;
+    }
+    .contactos {
+        display: flex;
+        justify-content: center;
+        
+        img {
+            @include sizes(20px,20px); 
+            margin-top: 5px;
+            margin-left: 15px; 
+        } 
+        a {
+            margin-top: 7px;
+            margin-left: 15px;
+        }
+
+        p {
+            color: black;
+            font-size: 1em;
+            margin: 8px;
+        }
+    }
+}
+
+// Nesting Pagina Productos
+
+.mercaderia {
+    grid-template-areas: "medallones medallones medallones"                             
+                         "pizza pizza pizza"
+                         "canelones canelones canelones"
+                         "albondigas albondigas albondigas"
+                         "tartas tartas tartas"
+                         "panqueques panqueques panqueques";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 20% auto 20%;
+    height: 150vw;
+    background-image: map-get($map: $fondos, $key: pagina2);
+
+    h2 {    
+        display:flex;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;     
+        font-weight: bold; 
+        text-decoration: underline;      
+        font-weight: 200;     
+        text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);     
+        padding-top: 30px; 
+        margin-bottom: 30px; 
+        margin-left: 550px; 
+        animation-name: backInLeft;
+        animation-duration: 1s; 
+    }
+
+    .medallones {
+        grid-area: medallones;
+        @extend.medallones-contenedor;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;
+        margin-top: 20px;
+        margin-left: 70px;
+        padding-top: 30px;    
+        padding-left: 60px;
+        transition-property: background-image;
+        transition-duration: 2s;
+        &:hover {
+            background-image: linear-gradient( 95.2deg,  rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            flex-direction: column;    
+            left: 120px;
+            top: 90px;
+            line-height: 1.5;
+            font-size: 18px;
+
+            li {
+                color:rgb(46, 56, 39);
+            }
+
+            p {
+                color:rgb(21, 70, 63);    
+                margin-left: 30px;
+                margin-top: 20px;
+            }
+        }
+                    
+        img {    
+            @include sizes(350px,250px);
+            display: flex;      
+            position: absolute;    
+            box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69); 
+            top: 20px; 
+            left: 650px;      
+        }
+    }
+
+    .pizza { 
+        grid-area: pizza; 
+        @extend.pizza-contenedor;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;
+        margin: 20px;    
+        padding-top: 30px;
+        padding-left: 50px;
+        margin-left: 70px;
+        transition-property: background-image;
+        transition-duration: 2s; 
+        &:hover {
+            background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            flex-direction: column;    
+            left: 670px;
+            top: 90px;
+            line-height: 1.5;
+            font-size: 18px; 
+
+            li {
+                color:rgb(46, 56, 39);
+            }
+
+            p {
+                color:rgb(21, 70, 63);    
+                margin-left: 30px;
+                margin-top: 20px;
+            }
+        }
+        
+        img {    
+            display: flex;      
+            @include sizes(350px,250px);    
+            position: absolute;    
+            top: 20px;
+            left: 100px;
+            box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);            
+        }
+    }    
+
+    .canelones {
+        grid-area: canelones;
+        @extend.medallones-contenedor;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;
+        margin: 20px;
+        padding-top: 30px;
+        padding-left: 60px;
+        margin-left: 70px;        
+        transition-property: background-image;
+        transition-duration: 2s;    
+        &:hover {
+            background-image: linear-gradient( 95.2deg,  rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            flex-direction: column;    
+            left: 160px;
+            top: 90px;
+            line-height: 1.5;
+            font-size: 18px;
+
+            li {
+                color:rgb(46, 56, 39);
+            }
+
+            p {
+                color:rgb(21, 70, 63);    
+                margin-left: 90px;
+                margin-top: 20px;
+            }
+        }
+        
+        img {    
+            @include sizes(350px,250px);
+            display: flex;      
+            position: absolute;    
+            box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69); 
+            top: 20px; 
+            left: 650px;
+        }
+    }
+    .albondigas {
+        grid-area: albondigas;
+        @extend.pizza-contenedor;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;
+        margin: 20px; 
+        margin-left: 70px;
+        padding-top: 30px;
+        padding-left: 50px;
+        transition-property: background-image;
+        transition-duration: 2s;    
+        &:hover {
+            background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            flex-direction: column;    
+            left: 670px;
+            top: 90px;
+            line-height: 1.5;
+            font-size: 18px; 
+
+            li {
+                color:rgb(46, 56, 39);
+            }
+
+            p {
+                color:rgb(21, 70, 63);    
+                margin-left: 30px;
+                margin-top: 20px;
+            }
+        }
+        img {    
+            display: flex;      
+            @include sizes(350px,250px);    
+            position: absolute;    
+            top: 20px;
+            left: 100px;
+            box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);   
+        }
+    }
+
+    .tartas {
+        grid-area: tartas;
+        @extend.medallones-contenedor;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;
+        margin: 20px;    
+        padding-top: 30px;
+        padding-left: 60px;
+        margin-left: 70px;
+        transition-property: background-image;
+        transition-duration: 2s;    
+        &:hover {
+            background-image: linear-gradient( 95.2deg,  rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            flex-direction: column;    
+            left: 160px;
+            top: 90px;
+            line-height: 1.5;
+            font-size: 18px;
+
+            li {
+                color:rgb(46, 56, 39);
+            }        
+            p {
+                color:rgb(21, 70, 63);    
+                margin-left: 90px;
+                margin-top: 20px;
+            }
+        }
+        img {
+            @include sizes(350px,250px);
+            display: flex;      
+            position: absolute;    
+            box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69); 
+            top: 20px; 
+            left: 650px; 
+        }
+    }
+    .panqueques { 
+        grid-area: panqueques;  
+        @extend.pizza-contenedor;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;
+        margin: 20px; 
+        padding-top: 30px;
+        padding-left: 90px;
+        margin-left: 70px;
+        transition-property: background-image;
+        transition-duration: 2s;    
+        &:hover {
+            background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+        }
+        ul {
+            display: flex;
+            position: absolute;
+            flex-direction: column;    
+            left: 670px;
+            top: 90px;
+            line-height: 1.5;
+            font-size: 18px; 
+
+            li {
+                color:rgb(46, 56, 39);
+            }
+
+            p {
+                color:rgb(21, 70, 63);    
+                margin-left: 30px;
+                margin-top: 20px;
+            }
+        }
+        img {
+            display: flex;      
+            @include sizes(350px,260px);   
+            position: absolute;    
+            top: 20px;
+            left: 100px;
+            box-shadow: 10px 10px 20px 0 rgb(70, 70, 69), 10px 10px 20px 0 rgb(70, 70, 69);
+        }
+    }
+}
+
+// Nesting Pagina Recetas
+
+.recetas {
+    background-image: map-get($map: $fondos, $key: pagina2);
+    height: 140vw;   
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);   
+
+    h2 {
+        grid-column: 4/6;
+        grid-row: 1;
+        display:flex;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;     
+        font-weight: bold; 
+        text-decoration: underline;      
+        font-weight: 200;     
+        text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);      
+        padding-top: 30px; 
+        margin-bottom: 30px;
+        animation-name: swing;
+        animation-duration: 1s;
+    }
+    
+    p {
+        grid-column: 3/8;
+        grid-row: 1;
+        display:flex;
+        position: absolute;
+        width: 90%;
+        height: 25%;  
+        margin: auto;
+        text-align: center;
+        line-height: 1.5;
+        font-family: $tipografia-base;
+        font-size: 20px;
+        margin-top: 100px;
+        margin-left: 40px;
+    }
+    
+    video {
+        grid-column: 3/7;
+        grid-row: 2/3;
+        display:flex;
+        position: relative;
+        align-content: center;  
+        width: 100%;      
+    }
+
+    .primera {
+        display:flex;
+        grid-column: 1/4;
+        grid-row: 3/8;
+        position: relative; 
+        box-sizing: border-box;        
+        width: 98%;
+        height: 370px;
+        justify-content: center;
+        background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+        margin-left: 50px; 
+        margin-top: 100px;
+            
+        h3 {
+            color: $color-fuente;
+            font-size: 22px;
+            font-family: $tipografia-base;   
+            font-weight: bold; 
+            text-decoration: underline;      
+            font-weight: 100;     
+            text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+            justify-content: center;
+            position: absolute;
+            top: -70px;
+            left: 5px;
+        } 
+        
+        .estofado {
+            position: absolute;
+            font-size: 18px;     
+            font-weight: bold;    
+            color:rgb(62, 90, 56);
+            justify-content: center;
+            line-height: 1.8;
+            top: 10px;
+            padding: 15px;
+
+            .titular {
+                font-size: 18px;     
+                font-weight: bold;                 
+                font-family: $tipografia-base; 
+                text-decoration: underline;    
+            }
+        }
+
+        h4 {
+            color: $color-fuente;
+            font-size: $titulo-px;
+            font-family: $tipografia-base;    
+            font-weight: bold;         
+            font-weight: 100;     
+            text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+            justify-content: center;
+            position: absolute;
+            top: 390px;
+        }
+
+        .indicaciones {
+            display: flex;
+            position: relative;
+            box-sizing: border-box;        
+            width: 100%;    
+            justify-content: center;    
+            flex-direction: column; 
+            flex-wrap: wrap;         
+            
+            ol {
+                line-height: 1.7;
+                justify-self: center;
+                text-align: justify;
+                position: absolute;
+                top: 450px;
+                left: 20px;
+                font-size: 18px;
+                font-family: $tipografia-base;
+
+                li {
+                    color:rgb(21, 70, 63);
+                }
+            }
+        
+            img {
+                display: flex;
+                flex-direction: column;      
+                width: 70%;       
+                position: absolute;    
+                box-shadow: 10px 10px 20px 0 rgb(51, 51, 48), 10px 10px 20px 0 rgb(51, 51, 48);
+                bottom: 10px;
+                left: 90px; 
+                top: 870px; 
+            }
+        }
+    }
+
+    .segunda {
+        display:flex;
+        grid-column: 5/8;
+        grid-row: 3/8;
+        position: relative; 
+        box-sizing: border-box;        
+        width: 98%;
+        height: 370px;
+        justify-content: center;
+        background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+        margin-right: 20px;
+        margin-left: 10px;
+        margin-top: 100px;
+
+        h3 {
+            color: $color-fuente;
+            font-size: 22px;
+            font-family: $tipografia-base;   
+            font-weight: bold; 
+            text-decoration: underline;      
+            font-weight: 100;     
+            text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+            justify-content: center;
+            position: absolute;
+            top: -70px;
+            left: 5px;
+        }
+    
+        .pizza {
+            position: absolute;
+            font-size: 18px;     
+            font-weight: bold;    
+            color:rgb(62, 90, 56);
+            justify-content: center;
+            line-height: 1.8;
+            top: 10px;
+            padding: 15px;
+
+            .encabezado {
+                font-size: 18px;     
+                font-weight: bold;    
+                color:rgb(10, 48, 2);
+                text-decoration: underline;    
+            }
+        }
+
+        h4 {
+            color: $color-fuente;
+            font-size: $titulo-px;
+            font-family: $tipografia-base;    
+            font-weight: bold;         
+            font-weight: 100;     
+            text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+            justify-content: center;
+            position: absolute;
+            top: 390px;
+        }
+        
+        .pasos {
+            display: flex;
+            position: relative;
+            box-sizing: border-box;        
+            width: 100%;    
+            justify-content: center;    
+            flex-direction: column; 
+            flex-wrap: wrap;           
+        
+            ol {
+                line-height: 1.7;
+                justify-self: center;
+                text-align: justify;
+                position: absolute;
+                top: 450px;
+                left: 20px;
+                font-size: 18px;
+                font-family: $tipografia-base;
+
+                li {
+                    color:rgb(21, 70, 63);
+                }
+            }
+
+            img {
+                display: flex;
+                flex-direction: column;      
+                width: 70%;       
+                position: absolute;    
+                box-shadow: 10px 10px 20px 0 rgb(51, 51, 48), 10px 10px 20px 0 rgb(51, 51, 48);
+                bottom: 10px;
+                left: 90px; 
+                top: 870px;    
+            }
+        }
+    }
+}
+
+//Nesting Pagina Contacto
+
+.medios { 
+    background-image: map-get($map: $fondos, $key: pagina2);   
+    height: 60vw;   
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    h2 {
+        display: flex;
+        grid-column: 4/5;
+        grid-row: 1;
+        color: $color-fuente;
+        font-size: $titulo-px;
+        font-family: $tipografia-base;      
+        font-weight: bold; 
+        text-decoration: underline;      
+        font-weight: 200;     
+        text-shadow: 2px 2px 7px rgb(135, 167, 165), 2px 2px 7px rgb(135, 167, 165);
+        position: relative;
+        margin-left: 70px; 
+        margin-top: 50px;  
+        margin-bottom: 2px;
+        animation-name: heartBeat;
+        animation-duration: 1s;
+    }    
+
+    .flex-container {
+        display: flex;
+        grid-column: 2/7;
+        grid-row: 2/7;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        background:rgb(89, 201, 245);
+        margin: 20px;
+        width: 450px;
+        margin-left: 270px;
+        border: 14px solid rgb(5, 4, 31);
+        outline: 3px solid rgb(6, 146, 240);
+        padding: 20px;     
+        box-shadow: 2px 6px 20px #000;  
+
+        .form {
+            min-width: 500px;
+            flex: 2;
+            text-align: center;
+            padding: 30px;
+
+            .form-input {
+                width: 50%;
+                padding: 7px;
+                margin: 6px 0;
+                border: none;
+                border-bottom: 3px solid rgb(6, 146, 240);
+                outline: none;
+                background: rgb(62, 87, 124);
+                color: rgb(249, 252, 252);    
+                &:focus {
+                    background: linear-gradient(to bottom, transparent, rgb(110, 110, 99));
+                    outline: none;
+                    border-bottom: 3px solid rgb(146, 248, 209);
+                }
+
+                [type="submit"] {
+                    background-color:rgb(7, 4, 175);
+                    border-bottom: none;
+                    padding: 10px;
+                    &:hover {
+                        background-color: rgb(78, 75, 247);
+                        border-bottom: none;
+                        padding: 10px;
+                    }
+                    &:focus {
+                        background-color: rgb(146, 248, 209);
+                    }
+                    &:active {
+                        background-color: linear-gradient(to bottom, transparent, rgb(110, 110, 99));
+                    }
+                }
+            }
+
+            textarea {
+                min-height: 150px;
+                resize: none;
+            }
+        }
+    }
+
+    h3 {
+        grid-column: 2/7;
+        grid-row: 8;
+        display: flex;
+        color: rgb(32, 29, 29);
+        font-size: 20px;
+        font-weight: bold;        
+        text-shadow: 2px 2px 7px rgb(46, 43, 43);
+        position: relative;
+        margin-left: 150px;
+    }      
+}
